@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# COMP 3123 - Assignment 2
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Assignment 2 is a react project that uses openWeather's API to display today's weather forecast.
 
 ## Outputs
 
