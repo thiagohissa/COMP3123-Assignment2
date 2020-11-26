@@ -8,17 +8,16 @@ export default class Forecast extends React.Component
 {
     //Define state default values
     state = {
-        forecast: {}
+        forecast: {},
     };
 
     //Component Lifecycle Callback
     componentDidMount() {
-        axios.get(URL) //`https://jsonplaceholder.typicode.com/users`
+        axios.get(URL) //`https://jsonplaceholder.typicode.com/users` <Image src="holder.js/171x180" rounded /> http://openweathermap.org/img/wn/10d@2x.png
             .then(res => {
                 if(res.status === 200){
                     console.log(res.data);
                     const forecast = res.data;
-                    const weather = res.data.weather;
                     this.setState({ forecast });
                 }
                 else{
@@ -44,6 +43,7 @@ export default class Forecast extends React.Component
                         <li>ID: {weather.id}</li>
                         <li>Forecast: {weather.main}</li>
                         <li>Description: {weather.description}</li>
+                        <li>Description: {weather.icon}</li>
                     </ul>
                 ) }
 
@@ -55,6 +55,8 @@ export default class Forecast extends React.Component
                         <li>Min: {this.state.forecast.main.temp_min}</li>
                     </ul>
                 }
+                <p>ICON: {this.state.forecast.weather[0].icon}</p>
+                <img src={ "http://openweathermap.org/img/wn/" + this.state.forecast.weather[0].icon + "@2x.png" } />
             </div>
         )
     }
