@@ -4,4 +4,4 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Outputs
 
-![Screenshot](assignment 2 output.png)
+![Screenshot](assignment2output.png)
